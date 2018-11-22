@@ -455,11 +455,11 @@ AbstractRefreshableApplicationContext.customizeBeanFactory方法用于给子类�
 ```java
 protected void customizeBeanFactory(DefaultListableBeanFactory beanFactory) {
     if (this.allowBeanDefinitionOverriding != null) {
-        //默认false，不允许覆盖
+        //默认ture，允许覆盖
         beanFactory.setAllowBeanDefinitionOverriding(this.allowBeanDefinitionOverriding);
     }
     if (this.allowCircularReferences != null) {
-        //默认false，不允许循环引用
+        //默认true，允许循环引用
         beanFactory.setAllowCircularReferences(this.allowCircularReferences);
     }
 }
